@@ -7,8 +7,6 @@ la distribution de probabilité d'un surfeur aléatoire.
 
 '''
 
-# Importing Libraries
-
 import os
 import random
 import re
@@ -17,7 +15,7 @@ import matplotlib.pyplot as plt
 import pandas as pan
 
 
-# Global Constantes
+# Constantes globales
 
 AMORTISSEMENT = 0.85
 SAMPLES = 100000
@@ -132,8 +130,7 @@ def pagerank(site, amortissement, n):
         
         else:
             
-            # Next sample generated from the previous one based on its transition model
-            #Prochain sample généré à partir du précédent en se basant sur son transition model
+            # Prochain sample généré à partir du précédent en se basant sur son transition model
             
             model = transition_model(site, sample, amortissement)
             population, weights = zip(*model.items())
